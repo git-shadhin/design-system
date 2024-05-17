@@ -2,9 +2,13 @@
   "name": "@storybook/design-system",
   "version": "7.15.17",
   "description": "Storybook design system",
+  "homepage": "https://github.com/storybookjs/design-system#readme",
+  "bugs": {
+    "url": "https://github.com/storybookjs/design-system/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybookjs/design-system.git"
+    "url": "git+https://github.com/storybookjs/design-system.git"
   },
   "license": "MIT",
   "author": {
@@ -27,7 +31,8 @@
     "release": "dotenv yarn build & yarn typescript:generate && auto shipit",
     "storybook": "yarn patch-package && storybook dev -p 6006",
     "typescript:check": "tsc --project ./tsconfig.json --noEmit",
-    "typescript:generate": "tsc --declaration --emitDeclarationOnly --outDir dist --declarationMap"
+    "typescript:generate": "tsc --declaration --emitDeclarationOnly --outDir dist --declarationMap",
+    "chromatic": "npx chromatic --project-token=chpt_dae5bb92952f9ba"
   },
   "husky": {
     "hooks": {
@@ -53,8 +58,8 @@
   },
   "dependencies": {
     "@emotion/weak-memoize": "^0.3.0",
-    "@storybook/source-loader": "^7.6.6",
-    "@storybook/theming": "^7.6.6",
+    "@storybook/source-loader": "^8.1.1",
+    "@storybook/theming": "^8.1.1",
     "@types/pluralize": "^0.0.29",
     "@types/prismjs": "^1.16.6",
     "@types/react-modal": "^3.12.1",
@@ -78,26 +83,29 @@
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-react": "^7.10.1",
     "@babel/preset-typescript": "^7.10.1",
+    "@chromatic-com/storybook": "^1",
     "@emotion/babel-plugin": "^11.10.6",
-    "@storybook/addon-a11y": "^7.6.6",
-    "@storybook/addon-actions": "^7.6.6",
-    "@storybook/addon-docs": "^7.6.6",
-    "@storybook/addon-essentials": "^7.6.6",
-    "@storybook/addon-storysource": "^7.6.6",
-    "@storybook/eslint-config-storybook": "^3.1.2",
-    "@storybook/linter-config": "^3.1.2",
-    "@storybook/react": "^7.6.6",
-    "@storybook/react-webpack5": "^7.6.6",
+    "@storybook/addon-a11y": "^8.1.1",
+    "@storybook/addon-actions": "^8.1.1",
+    "@storybook/addon-docs": "^8.1.1",
+    "@storybook/addon-essentials": "^8.1.1",
+    "@storybook/addon-mdx-gfm": "^8.1.1",
+    "@storybook/addon-storysource": "^8.1.1",
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
+    "@storybook/eslint-config-storybook": "^4.0.0",
+    "@storybook/linter-config": "^4.0.0",
+    "@storybook/react": "^8.1.1",
+    "@storybook/react-webpack5": "^8.1.1",
     "@svgr/cli": "^6.1.1",
     "@types/fs-extra": "^9.0.1",
     "auto": "^9.50.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
-    "chromatic": "^5.0.0",
+    "chromatic": "^11.3.5",
     "cross-env": "^7.0.2",
     "dotenv-cli": "^3.1.0",
     "eslint": "^7.1.0",
-    "eslint-plugin-storybook": "^0.6.11",
+    "eslint-plugin-storybook": "^0.8.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
     "node-fetch": "^2.6.0",
@@ -107,7 +115,7 @@
     "react-dom": "17",
     "seedrandom": "^3.0.5",
     "sort-package-json": "^1.51.0",
-    "storybook": "^7.6.6",
+    "storybook": "^8.1.1",
     "ts-loader": "^7.0.5",
     "typescript": "^4.9.5"
   },

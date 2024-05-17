@@ -27,7 +27,9 @@ const preview: Preview = {
       hideEmpty: true,
     },
   },
+
   decorators: [withGlobalStyle],
+  tags: ['autodocs']
 }
 
 export default preview;
